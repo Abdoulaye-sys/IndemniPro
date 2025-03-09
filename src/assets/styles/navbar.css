@@ -1,0 +1,111 @@
+/* Styles de la Navbar */
+.navbar {
+    background-color: #0077b6;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Menu Desktop */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    align-items: center; /* ✅ Alignement parfait */
+    gap: 1.5rem; /* ✅ Réduction de l'espace */
+    margin: 0;
+    padding: 0;
+}
+
+/* Chaque élément du menu */
+.navbar-menu li {
+    display: flex;
+    align-items: center; /* ✅ Assure un bon alignement vertical */
+}
+
+/* Liens du menu et bouton Déconnexion */
+.navbar-menu a,
+.logout-btn {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Effet au survol des liens */
+.navbar-menu a:hover {
+    color: #90e0ef;
+}
+
+/* Style du bouton Déconnexion */
+.logout-btn {
+    background-color: #d9534f;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 140px; /* ✅ Identique aux autres liens */
+}
+
+/* Effet au survol du bouton */
+.logout-btn:hover {
+    background-color: #c9302c;
+    border-color: #b52b27;
+}
+
+/* Animation légère au clic */
+.logout-btn:active {
+    transform: scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0077b6;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu a,
+    .logout-btn {
+        min-width: auto;
+        width: 100%;
+        padding: 1rem;
+    }
+}

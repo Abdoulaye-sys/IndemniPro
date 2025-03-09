@@ -1,0 +1,124 @@
+/* Styles généraux du dashboard */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin-top: 80px; /* Ajuste cette valeur en fonction de la hauteur de ta navbar */
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #2d3e50;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+  
+  /* Section des indemnisations */
+  .indemnisations-section {
+    margin-top: 30px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .indemnisations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .indemnisations-table th,
+  .indemnisations-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #f1f1f1;
+    font-size: 1rem;
+  }
+  
+  .indemnisations-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .indemnisations-table tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+  
+  .indemnisations-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .indemnisations-table tbody tr td {
+    color: #555;
+  }
+  
+  .indemnisations-table .valide {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .indemnisations-table .attente {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .indemnisations-table td[colspan="3"] {
+    color: #999;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  /* Style pour la navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #007bff; /* Bleu de fond pour la navbar */
+    z-index: 10;
+    padding: 15px 20px; /* Ajuste la taille du padding pour la navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar .navbar-links li {
+    display: inline;
+  }
+  
+  .navbar .navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .navbar .navbar-links li a:hover {
+    text-decoration: underline;
+  }
+  
