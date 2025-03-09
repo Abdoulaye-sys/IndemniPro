@@ -20,7 +20,8 @@ function Register() {
     setError(null); // Réinitialiser l'erreur
 
     try {
-      const response = await fetch("REACT_APP_API_URL/api/users/register", {
+      // Assurez-vous que l'URL de l'API est bien définie
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -29,7 +30,8 @@ function Register() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Une erreur est survenue");
+        // Gestion d'erreur plus détaillée
+        throw new Error(data.message || "Une erreur est survenue lors de l'inscription.");
       }
 
       console.log("Inscription réussie:", data);
@@ -45,13 +47,31 @@ function Register() {
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit} className="register-form">
         <label>Nom:</label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+        <input 
+          type="text" 
+          name="name" 
+          value={formData.name} 
+          onChange={handleChange} 
+          required 
+        />
 
         <label>Email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+        <input 
+          type="email" 
+          name="email" 
+          value={formData.email} 
+          onChange={handleChange} 
+          required 
+        />
 
         <label>Mot de passe:</label>
-        <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+        <input 
+          type="password" 
+          name="password" 
+          value={formData.password} 
+          onChange={handleChange} 
+          required 
+        />
 
         <button type="submit" className="btn-primary">S'inscrire</button>
       </form>
