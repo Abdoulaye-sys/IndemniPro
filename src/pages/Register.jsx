@@ -20,8 +20,10 @@ function Register() {
     setError(null); // Réinitialiser l'erreur
 
     try {
-      // Assurez-vous que l'URL de l'API est bien définie
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/register`, {
+      const apiUrl = import.meta.env.VITE_API_URL; // Utiliser VITE_API_URL
+      console.log("API URL:", apiUrl); // Vérification de l'URL de l'API
+
+      const response = await fetch(`${apiUrl}/api/users/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
