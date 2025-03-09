@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import "../assets/styles/login.css"; // ✅ Assure-toi que ce fichier est bien importé
+import "../assets/styles/Login.css"; // ✅ Assure-toi que ce fichier est bien importé
 
 function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
