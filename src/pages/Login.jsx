@@ -18,8 +18,8 @@ function Login() {
     setError("");
 
     try {
-      // Utilisation de la variable d'environnement REACT_APP_API_URL
-      const apiUrl = `${process.env.REACT_APP_API_URL}/api/auth/login`;
+      // Utilisation de la variable d'environnement VITE_API_URL
+      const apiUrl = `${import.meta.env.VITE_API_URL}/api/auth/login`;
       console.log("API URL:", apiUrl); // Vérification de l'URL de l'API
 
       const response = await fetch(apiUrl, {
