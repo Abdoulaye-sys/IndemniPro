@@ -18,7 +18,8 @@ function Login() {
     setError("");
 
     try {
-      const response = await fetch("REACT_APP_API_URL/api/auth/login", {
+      // Utilisation de la variable d'environnement REACT_APP_API_URL
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
