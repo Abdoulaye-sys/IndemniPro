@@ -18,7 +18,7 @@ function Dashboard() {
 
   const fetchIndemnisations = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/indemnisations", {
+      const response = await fetch("https://backend-indem.onrender.com/api/indemnisations", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
